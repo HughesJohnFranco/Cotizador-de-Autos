@@ -9,8 +9,8 @@
         <style>
             body {
                 font-family: 'Roboto', sans-serif;
-                color: #333; /* Color gris oscuro para un tono profesional */
-                line-height: 1.6; /* Mejora la legibilidad */
+                color: #333;
+                line-height: 1.6; 
                 margin: 0;
                 padding: 0;
             }
@@ -22,43 +22,43 @@
             }
             .imagen-centrada {
                 display: block;
-                margin: 0 auto; /* Centra la imagen horizontalmente */
+                margin: 0 auto; 
             }
             button {
-                font-size: 16px; /* Tamaño del texto */
-                padding: 10px 20px; /* Espaciado interno */
-                background-color: #212f3c; /* Color de fondo */
-                color: white; /* Color del texto */
-                border: none; /* Eliminar bordes */
-                cursor: pointer; /* Cambia el cursor al pasar por encima */
+                font-size: 16px; 
+                padding: 10px 20px;
+                background-color: #212f3c;
+                color: white; 
+                border: none; 
+                cursor: pointer; 
             }
-            /* Estilo para los títulos */
+
             .titulo {
                 text-align: center;
                 margin: 5px;
-                font-size: 30px; /* Tamaño del texto */
-                font-weight: bold; /* Negrita */
-                color: #17202a; /* Color de texto */
-                text-transform: uppercase; /* Transformar a mayúsculas */
-                letter-spacing: 2px; /* Espaciado entre letras */
+                font-size: 30px; 
+                font-weight: bold; 
+                color: #17202a; 
+                text-transform: uppercase; 
+                letter-spacing: 2px; 
             }
             .titulosub{
                 text-align: center;
                 margin: 5px;
-                font-size: 22px; /* Tamaño del texto */
-                font-weight: bold; /* Negrita */
-                color: #17202a; /* Color de texto */
-                text-transform: uppercase; /* Transformar a mayúsculas */
-                letter-spacing: 2px; /* Espaciado entre letras */
+                font-size: 22px; 
+                font-weight: bold;
+                color: #17202a;
+                text-transform: uppercase;
+                letter-spacing: 2px; 
             }
             .titulomen{
                 text-align: center;
                 margin: 5px;
-                font-size: 27px; /* Tamaño del texto */
-                font-weight: bold; /* Negrita */
-                color: #17202a; /* Color de texto */
-                text-transform: uppercase; /* Transformar a mayúsculas */
-                letter-spacing: 2px; /* Espaciado entre letras */
+                font-size: 27px; 
+                font-weight: bold; 
+                color: #17202a; 
+                text-transform: uppercase;
+                letter-spacing: 2px;
             }
         </style>        
     </head>
