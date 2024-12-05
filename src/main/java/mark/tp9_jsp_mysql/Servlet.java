@@ -113,7 +113,6 @@ public class Servlet extends HttpServlet {
     
     public void modificarVehiculos(HttpServletRequest request, HttpServletResponse responde)
     throws ServletException, IOException{
-        
         int id_vehiculo = Integer.parseInt(request.getParameter("id_vehiculo"));
         String marca = request.getParameter("marca");
         String modelo = request.getParameter("modelo");
@@ -148,20 +147,17 @@ public class Servlet extends HttpServlet {
         request.setAttribute("listavehiculos", vehiculos);        
         request.getRequestDispatcher("eliminarVehiculos.jsp").forward(request, responde);
     }
-     
-    public void eliminarVehiculos(HttpServletRequest request, HttpServletResponse responde)
-    throws ServletException, IOException{
-        
-        int id_vehiculo = Integer.parseInt(request.getParameter("id_vehiculo"));
 
+    
+    public void eliminarVehiculos(HttpServletRequest request, HttpServletResponse responde)
+    throws ServletException, IOException{  
+        int id_vehiculo = Integer.parseInt(request.getParameter("id_vehiculo"));
         
         VehiculoDAO vehiculoDAO = new VehiculoDAO();
         vehiculoDAO.eliminarVehiculo(id_vehiculo);
         mostrarVehiculosEliminar(request, responde);
     }    
     
-
-    //-----------------------------------------------------------------------------------
     
 
     private void mostrarVehiculosCotizar(HttpServletRequest request, HttpServletResponse response)
@@ -170,9 +166,7 @@ public class Servlet extends HttpServlet {
         List<EntidadVehiculo> vehiculos = vehiculoDAO.obtenerVehiculos();
         request.setAttribute("listavehiculos", vehiculos);
         request.getRequestDispatcher("cotizarVehiculos.jsp").forward(request, response);
-    }
-    
-    
+    }    
     
     
     private void cotizarVehiculo(HttpServletRequest request, HttpServletResponse response)
@@ -193,34 +187,5 @@ public class Servlet extends HttpServlet {
             request.getRequestDispatcher("cotizarVehiculos.jsp").forward(request, response);
         }
     }
-    
-    
-    /*
-    private void cotizarVehiculo(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        try {
-            int idVehiculo = Integer.parseInt(request.getParameter("id_vehiculo"));
-            int diasAlquiler = Integer.parseInt(request.getParameter("dias_alquiler"));
-
-            VehiculoDAO vehiculoDAO = new VehiculoDAO();
-            double cotizacion = vehiculoDAO.calcularCotizacion(idVehiculo, diasAlquiler);
-
-            // Pasar los resultados a la página de resultados de cotización
-            request.setAttribute("cotizacion", cotizacion);
-            request.setAttribute("idVehiculo", idVehiculo);
-            request.setAttribute("diasAlquiler", diasAlquiler);
-
-            // Redirigir a la página de resultados
-            request.getRequestDispatcher("resultadoCotizacion.jsp").forward(request, response);
-        } catch (Exception e) {
-            request.setAttribute("mensajeError", "Error al calcular la cotización.");
-            request.getRequestDispatcher("cotizarVehiculos.jsp").forward(request, response);
-        }
-    }
-
-    */
-     
    
 }
-
-
